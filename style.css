@@ -1,6 +1,6 @@
 body {
   margin: 10px;
-  background-image: url("https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/456300971_515529327516427_2271623375209950372_n.jpg?v=1735915445787");
+  background-image: url("456300971_515529327516427_2271623375209950372_n.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ li {
 }
 @font-face {
   font-family: darabka;
-  src: url(https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/Daraba_full.ttf?v=1734268654556);
+  src: Daraba_full.ttf;
 }
 
 .a {
