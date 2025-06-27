@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>25</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/favicon.png?v=1733996956335"
+      style="float: left"
+    />
+    <style>
+      body {
+        text-align: center;
+        background-image: url(https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/wik.png?v=1734001210339);
+        background-color: black;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+      #srd {
+        text-align: center;
+        display: block;
+        color: white;
+        font-weight: bold;
+      }
+      #countdown {
+        font-size: 30px;
+      }
+      #log {
+        width: 20%;
+        height: 20%;
+      }
+      #roundButton {
+        background-color: #96d9ff;
+        margin-bottom: 20px;
+        height: 50px;
+        border-radius: 50px;
+        border: 10px solid #0065a6;
+        outline: none;
+        transition: all 0.2s cubic-bezier(0, 1.26, 0.8, 1.28);
+        font-family: darabka;
+        font-size: 20px;
+      }
+
+      #roundButton:hover {
+        background-color: #96d9ff;
+        cursor: pointer;
+        border-color: #003557;
+        transform: scale(1.2, 1.2);
+      }
+
+      #roundButton:active {
+        border-color: #003557;
+        background-color: #fff;
+      }
+
+      #flyoutMenu {
+        width: 100vw;
+        height: 100vh;
+        background-color: darkred;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate3d(-100vw, 0, 0);
+        transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+        overflow: scroll;
+        z-index: 1000;
+        text-align: center;
+      }
+
+      #flyoutMenu.show {
+        transform: translate3d(0vw, 0, 0);
+      }
+
+      #flyoutMenu h2 a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+      }
+
+      #flyoutMenu h2 a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <div class="w3-display-topleft w3-padding-large w3-xlarge">
+        <button id="roundButton" class="fix"><strong>MENU</strong></button
+        ><br />
+        <div id="flyoutMenu">
+          <h2><a href="https://265wikingowie.glitch.me">Strona główna</a></h2>
+          <h2><a href="kadra.html">Nasza Kadra</a></h2>
+          <h2><a href="info.html">O Gromadzie</a></h2>
+          <h2>
+            <a href="https://www.facebook.com/wikingowie265/?locale=pl_PL"
+              >Facebook</a
+            >
+          </h2>
+          <h2>
+            <a href="https://www.facebook.com/265daraba?locale=pl_PL"
+              >Facebook Szczepu</a
+            >
+          </h2>
+          <h2><a href="kalendarz.html">Kalendarz</a></h2>
+          <h2><a href="hasl.html">Plany</a></h2>
+          <h2><a href="haslg.html">Gwiazdki</a></h2>
+          <h2><a href="slownik.html">Słowniczek</a></h2>
+          <h2><a href="kontakt.html">Kontakt</a></h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      var roundButton = document.querySelector("#roundButton");
+      roundButton.addEventListener("click", showMenu, false);
+
+      var flyoutMenu = document.querySelector("#flyoutMenu");
+      flyoutMenu.addEventListener("click", hideMenu, false);
+
+      function showMenu(e) {
+        flyoutMenu.classList.add("show");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      function hideMenu(e) {
+        flyoutMenu.classList.remove("show");
+        e.stopPropagation();
+
+        document.body.style.overflow = "auto";
+      }
+    </script>
+    <img id="log" src="https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/wik.png?v=1734001210339"><br>
+    <br><br><br><br><br><br>
+    <div id="srd">
+    <div id="countdown" style="font-size: 40px; margin: 10px">Ładowanie...</div>
+
+    <script>
+      // Ustaw datę i godzinę, do której ma być odliczanie
+      const targetDate = new Date("2026-11-22T09:00:00"); // Przykład: 31 grudnia 2025, godz. 23:59:59
+
+      function updateCountdown() {
+        const now = new Date();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").textContent = "Jedziemy!";
+          return;
+        }
+
+        // Obliczanie dni, godzin, minut i sekund
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Wyświetlanie odliczania w odpowiednim formacie
+        document.getElementById(
+          "countdown"
+        ).textContent = `${days} dni ${hours} godz. ${minutes} min ${seconds} sek`;
+      }
+
+      // Ustaw interwał, aby odliczanie było aktualizowane co sekundę
+      const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+    <hr style="margin: auto; width: 40%">
+    <p>11.2026</p>
+    </div>
+  </body>
+</html>

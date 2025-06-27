@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>265 Wikingowie - kadra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1080px)" href="tel.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/favicon.png?v=1733996956335">
+  </head>
+  <body>
+    <button id="roundButton" class="fix"><strong>MENU</strong></button><br>
+    <div id="flyoutMenu">
+    <h2><a href="https://265wikingowie.glitch.me">Strona główna</a></h2>
+    <h2><a href="kadra.html">Nasza Kadra</a></h2>
+    <h2><a href="info.html">O Gromadzie</a></h2>
+    <h2><a href="https://www.facebook.com/wikingowie265/?locale=pl_PL">Facebook</a></h2>
+    <h2><a href="https://www.facebook.com/265daraba?locale=pl_PL">Facebook Szczepu</a></h2>
+    <h2><a href="kalendarz.html">Kalendarz</a></h2>
+    <h2><a href="kontakt.html">Kontakt</a></h2>
+</div>
+    <script>
+        var roundButton = document.querySelector("#roundButton");
+        roundButton.addEventListener("click", showMenu, false);
+
+        var flyoutMenu = document.querySelector("#flyoutMenu");
+        flyoutMenu.addEventListener("click", hideMenu, false);
+
+        function showMenu(e) {
+            flyoutMenu.classList.add("show");
+
+            document.body.style.overflow = "hidden";
+        }
+
+        function hideMenu(e) {
+            flyoutMenu.classList.remove("show");
+            e.stopPropagation();
+
+            document.body.style.overflow = "auto";
+        }
+    </script>
+    <img id="log" src="https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/wik.png?v=1734001210339">
+<p id="glowna">
+
+      265 WGZ Wikingowie z Krainy Orłów </p><hr>
+   <h1 class="a">
+     O kadrze
+    </h1>
+    <h1 style="color:rgb(255,200,200)">
+      Hubert Bonder - drużynowy
+    </h1>
+<h3>
+  Oficjalnie od 2023 roku drużynowy 265 WGZ-ów "Wikingowie Z Krainy Orłów".
+Student na Uniwersytecie Warszawskim.
+</h3>
+    <h2>
+      Antoni Dehnel - przyboczny
+    </h2>
+<h3>
+  Przyboczny w gromadzie od 2022 roku.
+Uczeń szkoły średniej.
+Członek kapituły Sykma.
+</h3>
+    <h2>
+      Antoni Chojnacki - przyboczny
+    </h2>
+<h3>
+  Przyboczny w gromadzie od 2022 roku.
+Uczeń szkoły średniej.
+Członek kapituły Zarinka.
+</h3>
+    <h2>
+      Wiktor Uścinowicz - przyboczny
+    </h2>
+<h3>
+  Przyboczny w gromadzie od 2023 roku.
+Uczeń szkoły średniej.
+Członek kapituły Zarinka.
+</h3>
+<hr>
+<p id="dol">site by <a style="color:rgb(100, 100, 100);" href="https://mayster.glitch.me">Wiktor Uścinowicz</a></p>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>265 Wikingowie - kalendarz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1080px)" href="tel.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/favicon.png?v=1733996956335" style="float:left;">
+  </head>
+  <body>
+    <button id="roundButton" class="fix"><strong>MENU</strong></button><br>
+    <div id="flyoutMenu">
+    <h2><a href="https://265wikingowie.glitch.me">Strona główna</a></h2>
+    <h2><a href="kadra.html">Nasza Kadra</a></h2>
+    <h2><a href="info.html">O Gromadzie</a></h2>
+    <h2><a href="https://www.facebook.com/wikingowie265/?locale=pl_PL">Facebook</a></h2>
+    <h2><a href="https://www.facebook.com/265daraba?locale=pl_PL">Facebook Szczepu</a></h2>
+    <h2><a href="kalendarz.html">Kalendarz</a></h2>
+    <h2><a href="kontakt.html">Kontakt</a></h2>
+</div>
+    <script>
+        var roundButton = document.querySelector("#roundButton");
+        roundButton.addEventListener("click", showMenu, false);
+
+        var flyoutMenu = document.querySelector("#flyoutMenu");
+        flyoutMenu.addEventListener("click", hideMenu, false);
+
+        function showMenu(e) {
+            flyoutMenu.classList.add("show");
+
+            document.body.style.overflow = "hidden";
+        }
+
+        function hideMenu(e) {
+            flyoutMenu.classList.remove("show");
+            e.stopPropagation();
+
+            document.body.style.overflow = "auto";
+        }
+    </script>
+    <img id="log" src="https://cdn.glitch.global/89399022-e7ab-4af6-a1e3-15f5ee8e95d1/wik.png?v=1734001210339">
+<p id="glowna">
+265 WGZ Wikingowie z Krainy Orłów
+    </p>
+    <hr>
+   <h2 style="font-family:darabka;">
+     Kalendarz
+    </h2>
+    <h4 style="color:green;font-family:darabka;">
+      zbiórka
+    </h4>
+    <h4 style="color:darkred;font-family:darabka;">
+      brak zbiórki
+    </h4>
+    <p style="font-size:15px;font-weight:bold;">
+      UWAGA: proszę sprawdzać kalendarz, ponieważ mogą zajść zmiany!
+    </p>
+
+    
+
+<!--
+<table style="border:1px solid white;width:100%text-align:left;padding:5px;">
+<tr style="border:1px solid white;width:100%text-align:left;padding:5px;">
+<th colspan="7" style="font-size:30px;font-family:darabka;">Październik</th>
+</tr>
+<tr>
+<td style="border:none;color:white;">Pn</td>
+<td style="border:none;color:white;">Wt</td>
+<td style="border:none;color:white;">Śr</td>
+<td style="border:none;color:white;">Cz</td>
+<td style="border:none;color:white;">Pi</td>
+<td style="border:none;color:white;">So</td>
+<td style="border:none;color:white;">Ni</td>
+</tr>
+<tr>
+<td style=""></td>
+<td style=""></td>
+<td style="background-color:grey;">1</td>
+<td style="background-color:green;">2</td>
+<td style="background-color:grey;">3</td>
+<td style="background-color:grey;">4</td>
+<td style="background-color:grey;">5</td>
+</tr>
+<tr>
+<td style="background-color:grey;">6</td>
+<td style="background-color:grey;">7</td>
+<td style="background-color:grey;">8</td>
+<td style="background-color:green;">9</td>
+<td style="background-color:grey;">10</td>
+<td style="background-color:grey;">11</td>
+<td style="background-color:grey;">12</td>
+</tr>
+<tr>
+<td style="background-color:grey;">13</td>
+<td style="background-color:grey;">14</td>
+<td style="background-color:grey;">15</td>
+<td style="background-color:green;">16</td>
+<td style="background-color:grey;">17</td>
+<td style="background-color:grey;">18</td>
+<td style="background-color:grey;">19</td>
+</tr>
+<tr>
+<td style="background-color:grey;">20</td>
+<td style="background-color:grey;">21</td>
+<td style="background-color:grey;">22</td>
+<td style="background-color:green;">23</td>
+<td style="background-color:grey;">24</td>
+<td style="background-color:grey;">25</td>
+<td style="background-color:grey;">26</td>
+</tr>
+<tr>
+<td style="background-color:grey;">27</td>
+<td style="background-color:grey;">28</td>
+<td style="background-color:grey;">29</td>
+<td style="background-color:green;">30</td>
+<td style="background-color:grey;">31</td>
+<td style=""></td>
+<td style=""></td>
+</tr>
+<tr>
+<td style=""></td>
+<td style=""></td>
+<td style=""></td>
+<td style=""></td>
+<td style=""></td>
+<td style=""></td>
+<td style=""></td>
+</tr>
+</table>
+    <h4 style="font-family:darabka;font-size:15px;">
+    Wydarzenia
+  </h4>
+<ul>
+  <li style="color:orange;font-weight:bold;"></li>
+    </ul>
+-->
+    
+    <a href="25.html" style="font-family:Courier New;color:white;font-size:40px;font-weight:bold;">25 lat Wikingów</a>
+    <hr>
+<p id="dol">site by <a style="color:rgb(100, 100, 100);" href="https://mayster.glitch.me">Wiktor Uścinowicz</a></p>
+  </body>
+</html>
